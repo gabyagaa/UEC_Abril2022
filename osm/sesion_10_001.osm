@@ -7499,15 +7499,17 @@ OS:Construction,
 
 OS:Site,
   {67954095-e568-4057-a467-6d726fa7832a}, !- Handle
-  Site 1,                                 !- Name
-  ,                                       !- Latitude {deg}
-  ,                                       !- Longitude {deg}
-  ,                                       !- Time Zone {hr}
-  ,                                       !- Elevation {m}
+  Torreon,                                !- Name
+  25.52,                                  !- Latitude {deg}
+  -103.4161,                              !- Longitude {deg}
+  -6,                                     !- Time Zone {hr}
+  1124.1,                                 !- Elevation {m}
   ;                                       !- Terrain
 
 OS:YearDescription,
-  {ced9d852-3dbd-4e6c-ade7-1e572711c3f2}; !- Handle
+  {ced9d852-3dbd-4e6c-ade7-1e572711c3f2}, !- Handle
+  ,                                       !- Calendar Year
+  Sunday;                                 !- Day of Week for Start Day
 
 OS:ClimateZones,
   {f9298a12-fa75-446c-a6a6-301b9e4dc7b8}, !- Handle
@@ -8424,8 +8426,8 @@ OS:ThermalZone,
   ,                                       !- Fraction of Zone Controlled by Secondary Daylighting Control
   ,                                       !- Illuminance Map Name
   {217ecd2a-ff4f-410c-acca-eef4a60f09e7}, !- Group Rendering Name
-  ,                                       !- Thermostat Name
-  No,                                     !- Use Ideal Air Loads
+  {3eee441c-855b-4036-93a8-50e1416cdf00}, !- Thermostat Name
+  Yes,                                    !- Use Ideal Air Loads
   ;                                       !- Humidistat Name
 
 OS:Node,
@@ -8512,8 +8514,8 @@ OS:ThermalZone,
   ,                                       !- Fraction of Zone Controlled by Secondary Daylighting Control
   ,                                       !- Illuminance Map Name
   {2dcce9e8-8d55-4e72-b75e-a3a611ec1a3b}, !- Group Rendering Name
-  ,                                       !- Thermostat Name
-  No,                                     !- Use Ideal Air Loads
+  {5e4710e5-5665-461f-92ad-86e3f3b94d29}, !- Thermostat Name
+  Yes,                                    !- Use Ideal Air Loads
   ;                                       !- Humidistat Name
 
 OS:Node,
@@ -8600,8 +8602,8 @@ OS:ThermalZone,
   ,                                       !- Fraction of Zone Controlled by Secondary Daylighting Control
   ,                                       !- Illuminance Map Name
   {1373ff93-4fd6-4d58-98c9-37ede2f15c88}, !- Group Rendering Name
-  ,                                       !- Thermostat Name
-  No,                                     !- Use Ideal Air Loads
+  {a75aa85b-8e29-40ff-a75c-128a750ad992}, !- Thermostat Name
+  Yes,                                    !- Use Ideal Air Loads
   ;                                       !- Humidistat Name
 
 OS:Node,
@@ -8688,8 +8690,8 @@ OS:ThermalZone,
   ,                                       !- Fraction of Zone Controlled by Secondary Daylighting Control
   ,                                       !- Illuminance Map Name
   {9336ebfd-9172-4a6f-83ca-2fcd030f6032}, !- Group Rendering Name
-  ,                                       !- Thermostat Name
-  No,                                     !- Use Ideal Air Loads
+  {86f8e915-206b-49d5-8462-b89ee29395c1}, !- Thermostat Name
+  Yes,                                    !- Use Ideal Air Loads
   ;                                       !- Humidistat Name
 
 OS:Node,
@@ -8783,4 +8785,253 @@ OS:Rendering:Color,
   255,                                    !- Rendering Red Value
   0,                                      !- Rendering Green Value
   255;                                    !- Rendering Blue Value
+
+OS:SimulationControl,
+  {c12e9013-036a-4ca1-aab2-7f3ede0f5be7}; !- Handle
+
+OS:Sizing:Parameters,
+  {e6f79a82-7cd6-4120-ab61-3921208ccda6}, !- Handle
+  1.25,                                   !- Heating Sizing Factor
+  1.15;                                   !- Cooling Sizing Factor
+
+OS:Timestep,
+  {49e0aca8-90e5-46e3-bf76-c9cbd885c919}, !- Handle
+  6;                                      !- Number of Timesteps per Hour
+
+OS:ShadowCalculation,
+  {5972a25a-84f6-4ed2-a74f-0ea98f7a4256}, !- Handle
+  20,                                     !- Calculation Frequency
+  15000;                                  !- Maximum Figures in Shadow Overlap Calculations
+
+OS:HeatBalanceAlgorithm,
+  {02ca35c1-6a5c-4809-827f-0e0f669ed62e}, !- Handle
+  ConductionTransferFunction,             !- Algorithm
+  200;                                    !- Surface Temperature Upper Limit {C}
+
+OS:RunPeriod,
+  {608db4fe-85b6-424f-a625-50e6d25975e0}, !- Handle
+  Run Period 1,                           !- Name
+  1,                                      !- Begin Month
+  1,                                      !- Begin Day of Month
+  12,                                     !- End Month
+  31,                                     !- End Day of Month
+  ,                                       !- Use Weather File Holidays and Special Days
+  ,                                       !- Use Weather File Daylight Saving Period
+  ,                                       !- Apply Weekend Holiday Rule
+  ,                                       !- Use Weather File Rain Indicators
+  ,                                       !- Use Weather File Snow Indicators
+  ;                                       !- Number of Times Runperiod to be Repeated
+
+OS:StandardsInformation:Material,
+  {aa3ae821-0d7f-436b-a769-8de686d954d1}, !- Handle
+  {57a656b0-06ef-4771-ad1b-2a27d4d72bbc}; !- Material Name
+
+OS:WeatherFile,
+  {c76d82e0-7e4e-42b1-a550-edb6d34a26ab}, !- Handle
+  Torreon,                                !- City
+  COA,                                    !- State Province Region
+  MEX,                                    !- Country
+  SRC-TMYx,                               !- Data Source
+  763820,                                 !- WMO Number
+  25.52,                                  !- Latitude {deg}
+  -103.4161,                              !- Longitude {deg}
+  -6,                                     !- Time Zone {hr}
+  1124.1,                                 !- Elevation {m}
+  file:MEX_COA_Torreon.763820_TMYx.2007-2021.epw, !- Url
+  CD530346;                               !- Checksum
+
+OS:ScheduleTypeLimits,
+  {8c612496-1f54-4680-ab55-442e01897e7f}, !- Handle
+  Dimensionless,                          !- Name
+  ,                                       !- Lower Limit Value
+  ,                                       !- Upper Limit Value
+  Continuous;                             !- Numeric Type
+
+OS:ScheduleTypeLimits,
+  {994da8db-a5f4-4295-a26f-41bf19018254}, !- Handle
+  Dimensionless 1,                        !- Name
+  -1,                                     !- Lower Limit Value
+  1,                                      !- Upper Limit Value
+  Continuous;                             !- Numeric Type
+
+OS:ScheduleTypeLimits,
+  {0ee1279e-ce8e-4228-ac4f-246810119d3d}, !- Handle
+  Dimensionless 2,                        !- Name
+  0.1,                                    !- Lower Limit Value
+  1000,                                   !- Upper Limit Value
+  Continuous;                             !- Numeric Type
+
+OS:ScheduleTypeLimits,
+  {097f4aff-ba1f-47dd-b84f-18014dbaf1ab}, !- Handle
+  OnOff,                                  !- Name
+  0,                                      !- Lower Limit Value
+  1,                                      !- Upper Limit Value
+  Discrete,                               !- Numeric Type
+  Availability;                           !- Unit Type
+
+OS:ScheduleTypeLimits,
+  {c55a94b7-185b-4eb7-96c4-fd406f091da0}, !- Handle
+  Capacity,                               !- Name
+  0,                                      !- Lower Limit Value
+  ,                                       !- Upper Limit Value
+  Continuous,                             !- Numeric Type
+  Capacity;                               !- Unit Type
+
+OS:ScheduleTypeLimits,
+  {ff45807e-d515-451d-b82b-095c719468d2}, !- Handle
+  ClothingInsulation,                     !- Name
+  0,                                      !- Lower Limit Value
+  ,                                       !- Upper Limit Value
+  Continuous,                             !- Numeric Type
+  ClothingInsulation;                     !- Unit Type
+
+OS:ScheduleTypeLimits,
+  {d1184b1c-893f-485b-a611-28da660f2ffb}, !- Handle
+  ControlMode,                            !- Name
+  0,                                      !- Lower Limit Value
+  1,                                      !- Upper Limit Value
+  Discrete,                               !- Numeric Type
+  ControlMode;                            !- Unit Type
+
+OS:ScheduleTypeLimits,
+  {d62c4da4-4124-44cf-a0a5-03d3c22dc273}, !- Handle
+  DeltaTemperature,                       !- Name
+  ,                                       !- Lower Limit Value
+  ,                                       !- Upper Limit Value
+  Continuous,                             !- Numeric Type
+  DeltaTemperature;                       !- Unit Type
+
+OS:ScheduleTypeLimits,
+  {807612b1-f4ce-43d1-8134-fe1a58b0407c}, !- Handle
+  Dimensionless 3,                        !- Name
+  0,                                      !- Lower Limit Value
+  1,                                      !- Upper Limit Value
+  Continuous,                             !- Numeric Type
+  Dimensionless;                          !- Unit Type
+
+OS:ScheduleTypeLimits,
+  {1dfd369c-8c3e-4f0d-ac6b-c2827e06d189}, !- Handle
+  LinearPowerDensity,                     !- Name
+  0,                                      !- Lower Limit Value
+  ,                                       !- Upper Limit Value
+  Continuous,                             !- Numeric Type
+  LinearPowerDensity;                     !- Unit Type
+
+OS:ScheduleTypeLimits,
+  {1346f724-97b6-4e2d-97c1-13e180deb64d}, !- Handle
+  MassFlowRate,                           !- Name
+  ,                                       !- Lower Limit Value
+  ,                                       !- Upper Limit Value
+  Continuous,                             !- Numeric Type
+  MassFlowRate;                           !- Unit Type
+
+OS:ScheduleTypeLimits,
+  {aa678eb3-5f1b-47d0-bf35-01c6b24684ad}, !- Handle
+  Percent,                                !- Name
+  0,                                      !- Lower Limit Value
+  100,                                    !- Upper Limit Value
+  Continuous,                             !- Numeric Type
+  Percent;                                !- Unit Type
+
+OS:ScheduleTypeLimits,
+  {44bcfa21-763a-466e-a694-95c44c650bd4}, !- Handle
+  Pressure,                               !- Name
+  ,                                       !- Lower Limit Value
+  ,                                       !- Upper Limit Value
+  Continuous,                             !- Numeric Type
+  Pressure;                               !- Unit Type
+
+OS:ScheduleTypeLimits,
+  {76059ffa-0964-466f-9d28-8cfdeee02536}, !- Handle
+  RotationsPerMinute,                     !- Name
+  ,                                       !- Lower Limit Value
+  ,                                       !- Upper Limit Value
+  Continuous,                             !- Numeric Type
+  RotationsPerMinute;                     !- Unit Type
+
+OS:ScheduleTypeLimits,
+  {219de330-f295-4a0b-94f2-7b6cbb29accb}, !- Handle
+  Temperature,                            !- Name
+  -50,                                    !- Lower Limit Value
+  50,                                     !- Upper Limit Value
+  Continuous,                             !- Numeric Type
+  Temperature;                            !- Unit Type
+
+OS:ScheduleTypeLimits,
+  {8dc8b61c-eb83-439c-85d6-6338fa6838fa}, !- Handle
+  Temperature 38,                         !- Name
+  0,                                      !- Lower Limit Value
+  50,                                     !- Upper Limit Value
+  Continuous,                             !- Numeric Type
+  Temperature;                            !- Unit Type
+
+OS:ScheduleTypeLimits,
+  {b4683bbc-7e17-4eb8-9f84-68ca4f5025dd}, !- Handle
+  Velocity,                               !- Name
+  0,                                      !- Lower Limit Value
+  ,                                       !- Upper Limit Value
+  Continuous,                             !- Numeric Type
+  Velocity;                               !- Unit Type
+
+OS:ScheduleTypeLimits,
+  {180bfda8-03c7-4ae2-ae8d-e71a2a29dc0c}, !- Handle
+  VolumetricFlowRate,                     !- Name
+  0,                                      !- Lower Limit Value
+  ,                                       !- Upper Limit Value
+  Continuous,                             !- Numeric Type
+  VolumetricFlowRate;                     !- Unit Type
+
+OS:Schedule:Ruleset,
+  {bbaed075-4dc6-43b6-bc49-05b50854605c}, !- Handle
+  24,                                     !- Name
+  {d1762d25-1396-48e1-8abb-ba176787040b}, !- Schedule Type Limits Name
+  {d438d342-85e9-4905-aec3-f2a97d72dc30}; !- Default Day Schedule Name
+
+OS:Schedule:Day,
+  {d438d342-85e9-4905-aec3-f2a97d72dc30}, !- Handle
+  Schedule Day 1,                         !- Name
+  {d1762d25-1396-48e1-8abb-ba176787040b}, !- Schedule Type Limits Name
+  ,                                       !- Interpolate to Timestep
+  24,                                     !- Hour 1
+  0,                                      !- Minute 1
+  24;                                     !- Value Until Time 1
+
+OS:Schedule:Ruleset,
+  {74a275b9-61ee-48a6-8d9b-9949e0904851}, !- Handle
+  5,                                      !- Name
+  {d1762d25-1396-48e1-8abb-ba176787040b}, !- Schedule Type Limits Name
+  {e990329c-2dac-49dd-8eba-1b031b84a994}; !- Default Day Schedule Name
+
+OS:Schedule:Day,
+  {e990329c-2dac-49dd-8eba-1b031b84a994}, !- Handle
+  Schedule Day 2,                         !- Name
+  {d1762d25-1396-48e1-8abb-ba176787040b}, !- Schedule Type Limits Name
+  ,                                       !- Interpolate to Timestep
+  24,                                     !- Hour 1
+  0,                                      !- Minute 1
+  5;                                      !- Value Until Time 1
+
+OS:ThermostatSetpoint:DualSetpoint,
+  {a75aa85b-8e29-40ff-a75c-128a750ad992}, !- Handle
+  Thermostat Setpoint Dual Setpoint 1,    !- Name
+  {74a275b9-61ee-48a6-8d9b-9949e0904851}, !- Heating Setpoint Temperature Schedule Name
+  {bbaed075-4dc6-43b6-bc49-05b50854605c}; !- Cooling Setpoint Temperature Schedule Name
+
+OS:ThermostatSetpoint:DualSetpoint,
+  {5e4710e5-5665-461f-92ad-86e3f3b94d29}, !- Handle
+  Thermostat Setpoint Dual Setpoint 2,    !- Name
+  {74a275b9-61ee-48a6-8d9b-9949e0904851}, !- Heating Setpoint Temperature Schedule Name
+  {bbaed075-4dc6-43b6-bc49-05b50854605c}; !- Cooling Setpoint Temperature Schedule Name
+
+OS:ThermostatSetpoint:DualSetpoint,
+  {3eee441c-855b-4036-93a8-50e1416cdf00}, !- Handle
+  Thermostat Setpoint Dual Setpoint 3,    !- Name
+  {74a275b9-61ee-48a6-8d9b-9949e0904851}, !- Heating Setpoint Temperature Schedule Name
+  {bbaed075-4dc6-43b6-bc49-05b50854605c}; !- Cooling Setpoint Temperature Schedule Name
+
+OS:ThermostatSetpoint:DualSetpoint,
+  {86f8e915-206b-49d5-8462-b89ee29395c1}, !- Handle
+  Thermostat Setpoint Dual Setpoint 4,    !- Name
+  {74a275b9-61ee-48a6-8d9b-9949e0904851}, !- Heating Setpoint Temperature Schedule Name
+  {bbaed075-4dc6-43b6-bc49-05b50854605c}; !- Cooling Setpoint Temperature Schedule Name
 
