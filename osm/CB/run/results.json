@@ -1,0 +1,17 @@
+{
+  "Add Ground Temperature EnergyPlus Object": {
+    "jan_temp": 18.0,
+    "feb_temp": 18.0,
+    "mar_temp": 18.0,
+    "apr_temp": 18.0,
+    "may_temp": 18.0,
+    "jun_temp": 18.0,
+    "jul_temp": 18.0,
+    "aug_temp": 18.0,
+    "sept_temp": 18.0,
+    "oct_temp": 18.0,
+    "nov_temp": 18.0,
+    "dec_temp": 18.0,
+    "applicable": true
+  }
+}

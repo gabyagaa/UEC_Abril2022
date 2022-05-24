@@ -1,0 +1,319 @@
+{
+  "analysis": {
+    "display_name": "PAT_ejemplo",
+    "name": "PAT_ejemplo",
+    "output_variables": [],
+    "problem": {
+      "workflow": [
+        {
+          "name": "add_ground_temperature_energyplus_object",
+          "display_name": "Add Ground Temperature EnergyPlus Object",
+          "measure_type": "EnergyPlusMeasure",
+          "measure_definition_class_name": "AddGroundTemperatureEnergyPlusObject",
+          "measure_definition_directory": "./measures/ground",
+          "measure_definition_directory_local": "C:\\Users\\gbv\\Desktop\\UEC_Abril2022\\PAT\\PAT_ejemplo\\measures\\ground",
+          "measure_definition_display_name": "Add Ground Temperature EnergyPlus Object",
+          "measure_definition_name": "add_ground_temperature_energyplus_object",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "e9779801-eae7-44e4-adf6-19190d3197ac",
+          "measure_definition_version_uuid": "722ee587-83ff-464b-a946-6784d2483d19",
+          "uuid": "e9779801-eae7-44e4-adf6-19190d3197ac",
+          "version_uuid": "722ee587-83ff-464b-a946-6784d2483d19",
+          "description": "Temporary solution to underground heat transfer. Must have surfaces with outside BC = Ground. Default temperature argument values are from Fort Collins TMY3 file.",
+          "taxonomy": "Envelope.Opaque",
+          "arguments": [
+            {
+              "display_name": "Ground Temperature in January",
+              "display_name_short": "jan_temp",
+              "name": "jan_temp",
+              "value_type": "double",
+              "default_value": 5.09,
+              "value": 5.09
+            },
+            {
+              "display_name": "Ground Temperature in February",
+              "display_name_short": "feb_temp",
+              "name": "feb_temp",
+              "value_type": "double",
+              "default_value": 1.17,
+              "value": 1.17
+            },
+            {
+              "display_name": "Ground Temperature in March",
+              "display_name_short": "mar_temp",
+              "name": "mar_temp",
+              "value_type": "double",
+              "default_value": -0.7,
+              "value": -0.7
+            },
+            {
+              "display_name": "Ground Temperature in April",
+              "display_name_short": "apr_temp",
+              "name": "apr_temp",
+              "value_type": "double",
+              "default_value": -0.76,
+              "value": -0.76
+            },
+            {
+              "display_name": "Ground Temperature in June",
+              "display_name_short": "jun_temp",
+              "name": "jun_temp",
+              "value_type": "double",
+              "default_value": 6.55,
+              "value": 6.55
+            },
+            {
+              "display_name": "Ground Temperature in July",
+              "display_name_short": "jul_temp",
+              "name": "jul_temp",
+              "value_type": "double",
+              "default_value": 11.21,
+              "value": 11.21
+            },
+            {
+              "display_name": "Ground Temperature in August",
+              "display_name_short": "aug_temp",
+              "name": "aug_temp",
+              "value_type": "double",
+              "default_value": 15.2,
+              "value": 15.2
+            },
+            {
+              "display_name": "Ground Temperature in September",
+              "display_name_short": "sept_temp",
+              "name": "sept_temp",
+              "value_type": "double",
+              "default_value": 17.26,
+              "value": 17.26
+            },
+            {
+              "display_name": "Ground Temperature in October",
+              "display_name_short": "oct_temp",
+              "name": "oct_temp",
+              "value_type": "double",
+              "default_value": 16.88,
+              "value": 16.88
+            },
+            {
+              "display_name": "Ground Temperature in November",
+              "display_name_short": "nov_temp",
+              "name": "nov_temp",
+              "value_type": "double",
+              "default_value": 14.12,
+              "value": 14.12
+            },
+            {
+              "display_name": "Ground Temperature in December",
+              "display_name_short": "dec_temp",
+              "name": "dec_temp",
+              "value_type": "double",
+              "default_value": 9.9,
+              "value": 9.9
+            }
+          ],
+          "variables": [
+            {
+              "argument": {
+                "display_name": "Skip Add Ground Temperature EnergyPlus Object",
+                "display_name_short": "Skip entire measure",
+                "name": "__SKIP__",
+                "value_type": "boolean",
+                "default_value": false,
+                "value": false
+              },
+              "display_name": "Skip Add Ground Temperature EnergyPlus Object",
+              "display_name_short": "Skip entire measure",
+              "variable_type": "variable",
+              "units": null,
+              "minimum": false,
+              "maximum": true,
+              "relation_to_output": null,
+              "static_value": false,
+              "variable": true,
+              "uncertainty_description": {
+                "attributes": [
+                  {
+                    "name": "discrete",
+                    "values_and_weights": []
+                  },
+                  {
+                    "name": "lower_bounds",
+                    "value": false
+                  },
+                  {
+                    "name": "upper_bounds",
+                    "value": false
+                  },
+                  {
+                    "name": "modes",
+                    "value": false
+                  },
+                  {
+                    "name": "delta_x",
+                    "value": null
+                  },
+                  {
+                    "name": "stddev",
+                    "value": null
+                  },
+                  {
+                    "name": "discrete",
+                    "values_and_weights": [
+                      {
+                        "value": false,
+                        "weight": 0.25
+                      },
+                      {
+                        "value": false,
+                        "weight": 0.25
+                      },
+                      {
+                        "value": false,
+                        "weight": 0.25
+                      },
+                      {
+                        "value": true,
+                        "weight": 0.25
+                      }
+                    ]
+                  }
+                ],
+                "type": "discrete"
+              },
+              "workflow_index": 0
+            },
+            {
+              "argument": {
+                "display_name": "Ground Temperature in May",
+                "display_name_short": "may_temp",
+                "name": "may_temp",
+                "value_type": "double",
+                "default_value": 2.22,
+                "value": 20
+              },
+              "display_name": "Ground Temperature in May",
+              "display_name_short": "Ground Temperature in May",
+              "variable_type": "variable",
+              "units": "",
+              "minimum": 20,
+              "maximum": 24,
+              "relation_to_output": null,
+              "static_value": 20,
+              "uuid": "",
+              "version_uuid": "",
+              "variable": true,
+              "uncertainty_description": {
+                "type": "discrete",
+                "attributes": [
+                  {
+                    "name": "discrete",
+                    "values_and_weights": [
+                      {
+                        "value": 20,
+                        "weight": 0.25
+                      },
+                      {
+                        "value": 22,
+                        "weight": 0.25
+                      },
+                      {
+                        "value": 24,
+                        "weight": 0.25
+                      },
+                      {
+                        "value": 2.22,
+                        "weight": 0.25
+                      }
+                    ]
+                  },
+                  {
+                    "name": "lower_bounds",
+                    "value": 20
+                  },
+                  {
+                    "name": "upper_bounds",
+                    "value": 24
+                  },
+                  {
+                    "name": "modes",
+                    "value": 20
+                  },
+                  {
+                    "name": "delta_x",
+                    "value": null
+                  },
+                  {
+                    "name": "stddev",
+                    "value": null
+                  }
+                ]
+              },
+              "workflow_index": 1
+            }
+          ],
+          "workflow_index": 0
+        }
+      ],
+      "algorithm": {
+        "objective_functions": []
+      },
+      "analysis_type": null,
+      "design_alternatives": [
+        {
+          "name": "Alternative 1",
+          "options": [
+            {
+              "measure_name": "add_ground_temperature_energyplus_object",
+              "workflow_index": 0,
+              "name": "20",
+              "description": "Option 1 Description: Temporary solution to underground heat transfer. Must have surfaces with outside BC = Ground. Default temperature argument values are from Fort Collins TMY3 file."
+            }
+          ]
+        },
+        {
+          "name": "Alternative 1 Duplicate 1",
+          "options": [
+            {
+              "measure_name": "add_ground_temperature_energyplus_object",
+              "workflow_index": 0,
+              "name": "22",
+              "description": "Option 2 Description: Temporary solution to underground heat transfer. Must have surfaces with outside BC = Ground. Default temperature argument values are from Fort Collins TMY3 file."
+            }
+          ]
+        },
+        {
+          "name": "Alternative 1 Duplicate 1 Duplicate 1",
+          "options": [
+            {
+              "measure_name": "add_ground_temperature_energyplus_object",
+              "workflow_index": 0,
+              "name": "24",
+              "description": "Option 3 Description: Temporary solution to underground heat transfer. Must have surfaces with outside BC = Ground. Default temperature argument values are from Fort Collins TMY3 file."
+            }
+          ]
+        },
+        {
+          "name": "Alternative 1 Duplicate 1 Duplicate 1 Duplicate 1",
+          "options": [
+            {
+              "measure_name": "add_ground_temperature_energyplus_object",
+              "workflow_index": 0,
+              "name": "add_ground_temperature_energyplus_object",
+              "description": "Temporary solution to underground heat transfer. Must have surfaces with outside BC = Ground. Default temperature argument values are from Fort Collins TMY3 file."
+            }
+          ]
+        }
+      ]
+    },
+    "seed": {
+      "file_type": "OSM",
+      "path": "./seeds/sesion_10_001.osm"
+    },
+    "weather_file": {
+      "file_type": "EPW",
+      "path": "./weather/MEX_COA_Torreon.763820_TMYx.2007-2021.epw"
+    },
+    "file_format_version": 1,
+    "server_scripts": {}
+  }
+}

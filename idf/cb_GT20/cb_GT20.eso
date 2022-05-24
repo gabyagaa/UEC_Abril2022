@@ -1,0 +1,20 @@
+Program Version,EnergyPlus, Version 9.6.0-f420c06a69, YMD=2022.05.24 18:34
+1,5,Environment Title[],Latitude[deg],Longitude[deg],Time Zone[],Elevation[m]
+2,8,Day of Simulation[],Month[],Day of Month[],DST Indicator[1=yes 0=no],Hour[],StartMinute[],EndMinute[],DayType
+3,5,Cumulative Day of Simulation[],Month[],Day of Month[],DST Indicator[1=yes 0=no],DayType  ! When Daily Report Variables Requested
+4,2,Cumulative Days of Simulation[],Month[]  ! When Monthly Report Variables Requested
+5,1,Cumulative Days of Simulation[] ! When Run Period Report Variables Requested
+6,1,Calendar Year of Simulation[] ! When Annual Report Variables Requested
+596,11,THERMAL ZONE: N1,Zone Air System Sensible Cooling Energy [J] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+682,11,THERMAL ZONE: N2,Zone Air System Sensible Cooling Energy [J] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+744,11,THERMAL ZONE: N3,Zone Air System Sensible Cooling Energy [J] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+806,11,THERMAL ZONE: PB,Zone Air System Sensible Cooling Energy [J] !RunPeriod [Value,Min,Month,Day,Hour,Minute,Max,Month,Day,Hour,Minute]
+End of Data Dictionary
+1,RUN PERIOD 1,  25.52,-103.42,  -6.00,1124.10
+5,365
+596,54702648540.4039,0.0, 1, 1, 1,10,3757845.733377918,12,15,15,30
+682,60714845986.64778,0.0, 1, 1, 1,10,3904495.7851536544,12,15,15,20
+744,62026107077.12221,0.0, 1, 1, 1,10,3795994.4880348216,11, 1,15,30
+806,25139716655.848454,0.0, 1, 1, 1,10,2405097.3273123233,12,15,14,30
+End of Data
+ Number of Records Written=           4
